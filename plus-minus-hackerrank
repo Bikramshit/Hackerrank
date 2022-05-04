@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[100];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    double pos=0.000000;
+    double neg=0.000000;
+    double ze=0.000000;
+    
+    for(int i=0; i<n; i++){
+        if(arr[i]>0){
+            pos=pos + 1;
+        }
+        if(arr[i]==0){
+            ze = ze + 1;
+        }
+        if(arr[i]<0){
+            neg = neg + 1;    
+        }
+        }  
+    //cout<<pos<<" "<<ze<<" "<<neg;    
+    double rp = pos/n;
+    double rz = ze/n;
+    double rn = neg/n;
+    cout<<rp<<endl;
+    cout<<rn<<endl;
+    cout<<rz<<endl;
+    //double r = pos/n;
+    //cout<<r<<endl;
+    return 0;
+}
